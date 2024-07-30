@@ -1,0 +1,27 @@
+## Not Verified!!
+#
+torch 
+torchvision
+torchaudio
+
+# pip
+pytorch-lightning
+smplx==0.1.28
+pyrender
+opencv-python
+yacs
+scikit-image
+einops
+timm
+dill
+pandas
+chumpy
+
+
+# For training
+rich
+hydra_colorlog
+hydra-submitit-launcher
+hydra-core
+pyrootutils
+webdataset
