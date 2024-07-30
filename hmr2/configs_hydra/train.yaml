@@ -12,7 +12,7 @@ defaults:
 
   # experiment configs allow for version control of specific hyperparameters
   # e.g. best hyperparameters for given model and datamodule
-  - experiment: null
+  - experiment: hmr_vit_transformer.yaml
   - texture_exp: null
 
   # optional local config for machine/user specific settings
