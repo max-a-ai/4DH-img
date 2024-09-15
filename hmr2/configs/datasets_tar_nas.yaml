@@ -37,4 +37,4 @@ COCO-VAL:
     URLS: /home/max/nas_drive/publicdatasets/coco/coco-val/{000000..000000}.tar
     KEYPOINT_LIST: [0] # Dummy
 CMU-MOCAP:
-    DATASET_FILE: hmr2_training_data/cmu_mocap.npz
+    DATASET_FILE: /home/max/Documents/4dh-img/hmr2_training_data/cmu_mocap.npz

@@ -14,6 +14,7 @@
             "program": "${file}"
         },
         {
+            // command for terminal
             "type": "debugpy",
             "request": "launch",
             "name": "train",
@@ -22,6 +23,17 @@
             "program": "train.py",
             // "args": ["--dataset", "COCO-VAL"],
             "console": "integratedTerminal"
-        }    
+        },    
+        {
+            // command for terminal
+            "type": "debugpy",
+            "request": "launch",
+            "name": "Demo",
+            "python": "/home/max/new_venv/bin/python",
+            "cwd": "/home/max/Documents/4dh-img",
+            "program": "train.py",
+            // "args": ["--dataset", "COCO-VAL"],
+            "console": "integratedTerminal"
+        },    
     ]
 }
