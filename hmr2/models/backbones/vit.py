@@ -255,7 +255,7 @@ class ViT(nn.Module):
                  drop_path_rate=0., hybrid_backbone=None, norm_layer=None, use_checkpoint=False, 
                  frozen_stages=-1, ratio=1, last_norm=True,
                  patch_padding='pad', freeze_attn=False, freeze_ffn=False,
-                 ):
+                 ): # init of ViT with default values for all parameters, overwriting the ones that are passed
         # Protect mutable default arguments
         super(ViT, self).__init__()
         norm_layer = norm_layer or partial(nn.LayerNorm, eps=1e-6)

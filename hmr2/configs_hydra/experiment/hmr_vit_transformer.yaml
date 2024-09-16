@@ -29,12 +29,12 @@ MODEL:
   BACKBONE:
     TYPE: vit
     # PRETRAINED_WEIGHTS: /home/max/Documents/4dh-img/hmr2_training_data/vitpose_backbone.pth
-    PRETRAINED_WEIGHTS: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-h.pth
+    PRETRAINED_WEIGHTS: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-h.pth
     BACKBONE_TYPE:
-      VITPOSE_H: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-h.pth
-      VITPOSE_L: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-l.pth
-      VITPOSE_B: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-b.pth
-      VITPOSE_S: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-s.pth
+      VITPOSE_H: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-h.pth
+      VITPOSE_L: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-l.pth
+      VITPOSE_B: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-b.pth
+      VITPOSE_S: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-s.pth
   SMPL_HEAD:
     TYPE: transformer_decoder
     IN_CHANNELS: 2048

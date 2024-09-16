@@ -5,7 +5,7 @@ def inspect_pth(pth_file, output_dir='.'):
     data = torch.load(pth_file, map_location='cpu')
     
     # Create a README file
-    output_file = os.path.join(output_dir, "README_pth.md")
+    output_file = os.path.join(output_dir, "README_placeholder_pth.md")
     with open(output_file, 'w') as f:
         f.write(f"# Report for {os.path.basename(pth_file)}\n\n")
         f.write(f"## Overview\n\n")
@@ -24,11 +24,11 @@ def inspect_pth(pth_file, output_dir='.'):
                         # Print a few value examples based on their type
                         if isinstance(subvalue, torch.Tensor):
                             f.write(f"      - Tensor shape: {subvalue.shape}, dtype = {subvalue.dtype}\n")
-                            f.write(f"      - First 5 values: {subvalue.view(-1)[:5].tolist()}\n")
+                            f.write(f"      - First 2 values: {subvalue.view(-1)[:2].tolist()}\n")
                         elif isinstance(subvalue, (int, float, str)):
                             f.write(f"      - Value: {subvalue}\n")
                         elif isinstance(subvalue, list) and len(subvalue) > 0:
-                            f.write(f"      - First 5 values: {subvalue[:5]}\n")
+                            f.write(f"      - First 2 values: {subvalue[:2]}\n")
                         else:
                             f.write(f"      - Content: {str(subvalue)[:100]}...\n")  # Shortened output for complex types
                         
@@ -48,7 +48,8 @@ def inspect_pth(pth_file, output_dir='.'):
     print(f"README.md created at {output_file}")
 
 # Example usage
-path_file = '/home/max/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose_small.pth'
+path_file = '/home/max/Documents/4dh-img/hmr2_training_data/vitpose_backbone.pth'
 output_dir = path_file.replace('.pth', '.md')
-inspect_pth('/home/max/Documents/4dh-img/hmr2_training_data/vitpose_backbone.pth', output_dir='/home/max/Documents/4dh-img/hmr2/utils')
+inspect_pth(path_file, output_dir='/home/max/Documents/4dh-img/hmr2/utils')
+# inspect_pth('/home/max/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-h.pth', output_dir='/home/max/Documents/4dh-img/hmr2/utils')
 # inspect_pth(path_file, output_dir)
