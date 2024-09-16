@@ -22,20 +22,45 @@ def vit(cfg):
                 qkv_bias=True,
                 drop_path_rate=0.55,
             )
-    
+def vit_large(cfg):
+    return ViT(
+                img_size=(256, 192),
+                patch_size=16,
+                embed_dim=1024,
+                depth=24,
+                num_heads=16,
+                ratio=1,
+                use_checkpoint=False,
+                mlp_ratio=4,
+                qkv_bias=True,
+                drop_path_rate=0.5,
+    )
+def vit_base(cfg):
+    return ViT(
+                img_size=(256, 192),
+                patch_size=16,
+                embed_dim=768,
+                depth=12,
+                num_heads=12,
+                ratio=1,
+                use_checkpoint=False,
+                mlp_ratio=4,
+                qkv_bias=True,
+                drop_path_rate=0.3,
+    )
 def vit_small(cfg):
     return ViT(
-        img_size=(256, 192),
-        patch_size=16,
-        embed_dim=384,
-        depth=12,
-        num_heads=12,
-        ratio=1,
-        use_checkpoint=False,
-        mlp_ratio=4,
-        qkv_bias=True,
-        drop_path_rate=0.1,
-)
+                img_size=(256, 192),
+                patch_size=16,
+                embed_dim=384,
+                depth=12,
+                num_heads=12,
+                ratio=1,
+                use_checkpoint=False,
+                mlp_ratio=4,
+                qkv_bias=True,
+                drop_path_rate=0.1,
+    )
 
 def get_abs_pos(abs_pos, h, w, ori_h, ori_w, has_cls_token=True):
     """

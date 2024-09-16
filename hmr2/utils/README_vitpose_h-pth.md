@@ -1,0 +1,1258 @@
+# Report for vitpose-h.pth
+
+## Overview
+
+This `.pth` file contains 2 keys:
+
+- **meta**: type = <class 'dict'>
+  - Dictionary with 5 keys
+    - **env_info**: type = <class 'str'>
+      - Value: sys.platform: linux
+Python: 3.8.10 | packaged by conda-forge | (default, May 11 2021, 07:01:05) [GCC 9.3.0]
+CUDA available: True
+GPU 0,1,2,3,4,5,6,7: A100-SXM4-40GB
+CUDA_HOME: /usr/local/cuda
+NVCC: Build cuda_11.3.r11.3/compiler.29920130_0
+GCC: gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+PyTorch: 1.9.0a0+c3d40fd
+PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2019.0.5 Product Build 20190808 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.1.2 (Git Hash N/A)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.3
+  - NVCC architecture flags: -gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_86,code=compute_86
+  - CuDNN 8.2.1
+  - Magma 2.5.2
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.3, CUDNN_VERSION=8.2.1, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.9.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=ON, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, 
+
+TorchVision: 0.10.0a0
+OpenCV: 4.5.5
+MMCV: 1.3.9
+MMCV Compiler: GCC 9.3
+MMCV CUDA Compiler: 11.3
+MMPose: 0.24.0+1041e5c
+    - **seed**: type = <class 'int'>
+      - Value: 0
+    - **epoch**: type = <class 'int'>
+      - Value: 180
+    - **mmcv_version**: type = <class 'str'>
+      - Value: 1.3.9
+    - **time**: type = <class 'str'>
+      - Value: Mon Apr 18 16:38:01 2022
+
+- **state_dict**: type = <class 'collections.OrderedDict'>
+  - Dictionary with 403 keys
+    - **backbone.pos_embed**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1, 193, 1280]), dtype = torch.float32
+      - First 5 values: [0.0006491369567811489, 0.00040386331966146827, 1.546663224871736e-05, -0.00016539501666557044, -0.0005236031720414758]
+    - **backbone.patch_embed.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 3, 16, 16]), dtype = torch.float32
+      - First 5 values: [-2.3768940081936307e-05, -6.476656562881544e-05, -3.148649193462916e-05, -3.0773029720876366e-05, -2.8439346351660788e-05]
+    - **backbone.patch_embed.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.5955566167831421, 0.4470837414264679, 0.7077800631523132, 0.41051119565963745, 0.5218484401702881]
+    - **backbone.blocks.0.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.04105346277356148, -0.0005369296995922923, -0.0001310460502281785, 0.05795266106724739, -0.0012485551415011287]
+    - **backbone.blocks.0.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0007582535617984831, 0.0001669410994509235, -0.00014944651047699153, 0.00742484163492918, 0.00021594029385596514]
+    - **backbone.blocks.0.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.06217251345515251, 0.002423305995762348, -0.0035457988269627094, 0.02574322000145912, -0.001970442244783044]
+    - **backbone.blocks.0.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.08901643007993698, 0.08572572469711304, -0.10395385324954987, -3.0515809059143066, -0.14100928604602814]
+    - **backbone.blocks.0.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0011294812429696321, -0.0002052172931144014, -0.015307432040572166, -0.0034871420357376337, -0.011658879928290844]
+    - **backbone.blocks.0.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.4245457947254181, -0.2641488313674927, -0.4060424864292145, 0.31259340047836304, -0.4738104045391083]
+    - **backbone.blocks.0.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.23053589463233948, 0.2497062236070633, 0.21369288861751556, 0.7962034344673157, 0.016148684546351433]
+    - **backbone.blocks.0.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.04570319131016731, 0.04542249068617821, -0.0040729958564043045, -0.33257076144218445, 0.009557615034282207]
+    - **backbone.blocks.0.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.015447746030986309, -0.025250868871808052, 0.009362776763737202, -0.00981559045612812, -0.030951371416449547]
+    - **backbone.blocks.0.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.5150492191314697, -0.8451420068740845, -0.7064212560653687, -1.980048656463623, -1.2231931686401367]
+    - **backbone.blocks.0.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.0449579581618309, 0.0002372606104472652, -0.037183888256549835, 0.053767599165439606, -0.04043496027588844]
+    - **backbone.blocks.0.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.250471830368042, 0.6691499948501587, 0.39876168966293335, 0.12857849895954132, -0.0751979872584343]
+    - **backbone.blocks.1.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [3.5183307772967964e-05, -0.0003093700797762722, 0.025062130764126778, 0.0006064928020350635, 0.0011052079498767853]
+    - **backbone.blocks.1.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-4.8695801524445415e-05, -0.0007349500665441155, 0.004575463477522135, 6.369114998960868e-05, 0.000684774131514132]
+    - **backbone.blocks.1.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0022395486012101173, 0.00010361272870795801, 0.002219724003225565, -0.0009084038319997489, -0.0008646621135994792]
+    - **backbone.blocks.1.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.0877796933054924, -0.02775396592915058, 0.01663973368704319, 0.09885011613368988, 1.7376887798309326]
+    - **backbone.blocks.1.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.004293412901461124, -0.0031787417829036713, -0.04580877348780632, 0.013148047029972076, 0.01590879261493683]
+    - **backbone.blocks.1.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.2597167491912842, 0.7416276335716248, 0.3875974714756012, 0.08549325168132782, 0.008806911297142506]
+    - **backbone.blocks.1.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.0004108903231099248, 0.0014362005749717355, 0.000436510395957157, 0.000640544923953712, -4.6444190957117826e-05]
+    - **backbone.blocks.1.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0007068533450365067, 0.00019468291429802775, 0.0013141045346856117, -0.0008028448792174459, -0.0004951724549755454]
+    - **backbone.blocks.1.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0009198262705467641, 0.011858517304062843, -0.004003490321338177, -0.015104041434824467, 0.0036190946120768785]
+    - **backbone.blocks.1.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9921855926513672, -0.9198572635650635, -3.1432788372039795, -0.8645477294921875, -3.2023961544036865]
+    - **backbone.blocks.1.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.040333349257707596, 0.014688333496451378, 0.0034661891404539347, -0.03596239164471626, 0.009856641292572021]
+    - **backbone.blocks.1.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.21810626983642578, 0.6652713418006897, 0.4181249141693115, -0.04835063964128494, 0.053511254489421844]
+    - **backbone.blocks.2.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.2971709370613098, 0.27425307035446167, 1.4721767902374268, 0.1331959068775177, 0.22669248282909393]
+    - **backbone.blocks.2.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.02972978912293911, 0.17437370121479034, 0.1150546744465828, -0.1190003827214241, 0.036379825323820114]
+    - **backbone.blocks.2.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.042223911732435226, 0.016839493066072464, 0.004170060623437166, -0.020632410421967506, 0.02814803645014763]
+    - **backbone.blocks.2.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.2703515887260437, -0.13506948947906494, -0.10774464905261993, -0.015382654033601284, -0.004102472215890884]
+    - **backbone.blocks.2.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.06405647099018097, 0.0047704074531793594, -0.06366437673568726, 0.1407928317785263, -0.0336373932659626]
+    - **backbone.blocks.2.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.160793274641037, 0.6115100979804993, 0.418832004070282, 0.07222836464643478, 0.14556725323200226]
+    - **backbone.blocks.2.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.3880560100078583, 0.4177911579608917, -0.0008161157020367682, 0.3320150673389435, 0.3206643760204315]
+    - **backbone.blocks.2.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.05436865985393524, 0.18271924555301666, 0.0012189586414024234, -0.19653628766536713, 0.03477277234196663]
+    - **backbone.blocks.2.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.010984526015818119, 0.023764226585626602, 0.004318574443459511, 0.004760841839015484, 0.03314168006181717]
+    - **backbone.blocks.2.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.3371970653533936, -0.8913158178329468, -1.1099218130111694, -0.6119012236595154, -1.2371923923492432]
+    - **backbone.blocks.2.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.06709058582782745, 0.014025183394551277, -0.0008002067334018648, -0.0036337024066597223, 0.06981217861175537]
+    - **backbone.blocks.2.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.13572371006011963, 0.3947420120239258, 0.4051882028579712, -0.03491516411304474, 0.11201588064432144]
+    - **backbone.blocks.3.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.2764400541782379, 0.21668510138988495, 1.4861083030700684, 0.19713273644447327, 0.19154638051986694]
+    - **backbone.blocks.3.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08344429731369019, -0.009871087968349457, 0.05302070453763008, -0.14785951375961304, 0.012103402987122536]
+    - **backbone.blocks.3.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.020716706290841103, -0.007396786008030176, -0.004068177659064531, 0.005144151393324137, -0.02687946893274784]
+    - **backbone.blocks.3.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.13891816139221191, -0.1990022212266922, -0.06421408802270889, 0.034320421516895294, 0.17546039819717407]
+    - **backbone.blocks.3.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.03953726962208748, 0.0049837687984108925, 0.06939305365085602, 0.0011039003729820251, 0.0036078838165849447]
+    - **backbone.blocks.3.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.11415091156959534, 0.4320284128189087, 0.5317608118057251, 0.005333163309842348, 0.12695804238319397]
+    - **backbone.blocks.3.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.36649781465530396, 0.37111014127731323, 0.8206096291542053, 0.141343891620636, 0.43829602003097534]
+    - **backbone.blocks.3.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.02938934974372387, -0.011573423631489277, -0.060057632625103, -0.09073475748300552, 0.00711048673838377]
+    - **backbone.blocks.3.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.07452376931905746, 0.03637189418077469, -0.003731111064553261, -0.0018440105486661196, -0.0450621098279953]
+    - **backbone.blocks.3.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9029459357261658, -1.2088444232940674, -1.7360919713974, -0.9748082756996155, -0.7912686467170715]
+    - **backbone.blocks.3.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.019349459558725357, -0.056661348789930344, 0.01873970590531826, 0.00040064609493128955, 0.029467342421412468]
+    - **backbone.blocks.3.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.11711398512125015, 0.43938228487968445, 0.479000449180603, -0.11167505383491516, 0.11113647371530533]
+    - **backbone.blocks.4.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.24271804094314575, 0.2845296561717987, 1.8701165914535522, 0.19274543225765228, 0.17550453543663025]
+    - **backbone.blocks.4.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.040201760828495026, -0.0020250394009053707, 0.267595112323761, -0.09739859402179718, 0.01328558474779129]
+    - **backbone.blocks.4.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.006349957548081875, -0.020439986139535904, 0.004036060068756342, -0.007371177431195974, -0.006249024532735348]
+    - **backbone.blocks.4.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.025866586714982986, 0.16350120306015015, 0.062423113733530045, -0.03810259699821472, 0.09143789112567902]
+    - **backbone.blocks.4.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.02137860096991062, 0.025221237912774086, 0.014346718788146973, 0.043055035173892975, 0.03654365986585617]
+    - **backbone.blocks.4.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.07307492941617966, 0.5081064105033875, 0.8815046548843384, -0.06570965051651001, 0.15841953456401825]
+    - **backbone.blocks.4.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.47920849919319153, 0.49297627806663513, 0.001331488136202097, 0.27763092517852783, 0.47654759883880615]
+    - **backbone.blocks.4.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.030823083594441414, -0.013318836688995361, -0.0021535952109843493, -0.08430119603872299, 0.015684356912970543]
+    - **backbone.blocks.4.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.015067757107317448, -0.04829023405909538, 0.015850691124796867, -0.03127634525299072, 0.007532309275120497]
+    - **backbone.blocks.4.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.8197175860404968, -1.3195489645004272, -0.5013815760612488, -1.106940507888794, -1.2325119972229004]
+    - **backbone.blocks.4.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.013552811928093433, 0.007112510502338409, -0.010082639753818512, 0.057386964559555054, 0.049520093947649]
+    - **backbone.blocks.4.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.079266756772995, 0.4451970160007477, 1.0051378011703491, -0.12065596878528595, 0.1486356556415558]
+    - **backbone.blocks.5.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.17160145938396454, 0.2046300172805786, 0.7933570146560669, 0.19893257319927216, 0.09022708982229233]
+    - **backbone.blocks.5.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.03251028433442116, -2.4387487428612076e-05, 0.016541574150323868, -0.047889064997434616, 0.011726400814950466]
+    - **backbone.blocks.5.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.13172714412212372, 0.10896766185760498, 0.004129983484745026, -0.16764800250530243, -0.03710772097110748]
+    - **backbone.blocks.5.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.0489787682890892, -0.052698954939842224, -0.05047774687409401, -0.015111501328647137, 0.09341650456190109]
+    - **backbone.blocks.5.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.030683642253279686, 0.018414000049233437, -0.008274252526462078, 0.01035386510193348, -0.032354388386011124]
+    - **backbone.blocks.5.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.1017163023352623, 0.44982144236564636, 0.7770692110061646, -0.11453355103731155, 0.10609229654073715]
+    - **backbone.blocks.5.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.4164891541004181, 0.37529250979423523, 0.14666831493377686, 0.2942885458469391, 0.29616546630859375]
+    - **backbone.blocks.5.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.018556658178567886, 0.03114084154367447, 0.04075000807642937, -0.05804622918367386, 0.034416619688272476]
+    - **backbone.blocks.5.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.10065453499555588, -0.032409731298685074, -0.007084425538778305, -0.008551194332540035, -0.061746034771203995]
+    - **backbone.blocks.5.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.7569704055786133, -0.3996325731277466, -0.9659488201141357, -0.7512472867965698, -1.230683445930481]
+    - **backbone.blocks.5.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.09048885852098465, -0.021222421899437904, 0.043662309646606445, 0.01536797545850277, -0.03817784786224365]
+    - **backbone.blocks.5.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08431750535964966, 0.35136649012565613, 0.8126367926597595, -0.16210733354091644, 0.08489121496677399]
+    - **backbone.blocks.6.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.22999581694602966, 0.22606661915779114, 1.513737440109253, 0.21194030344486237, 0.11199831962585449]
+    - **backbone.blocks.6.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.040220052003860474, -0.03630831837654114, -0.112510547041893, -0.022888796404004097, 0.008659148588776588]
+    - **backbone.blocks.6.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0264121163636446, -0.07823406904935837, -0.009655277244746685, 0.0920025110244751, 0.006303979549556971]
+    - **backbone.blocks.6.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.2671058475971222, 0.4429403245449066, -0.2570131719112396, 0.005063342861831188, 0.009036768227815628]
+    - **backbone.blocks.6.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0024398856330662966, -0.06251554191112518, -0.04158168286085129, 0.026864811778068542, 0.09181540459394455]
+    - **backbone.blocks.6.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.1581757515668869, 0.33056989312171936, 0.5188114047050476, -0.16892801225185394, 0.08513595163822174]
+    - **backbone.blocks.6.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.4002681076526642, 0.4052862226963043, 0.27794894576072693, 0.2982625961303711, 0.3114427328109741]
+    - **backbone.blocks.6.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04798932746052742, -0.03125419467687607, 0.010432133451104164, -0.03186711296439171, -0.004586555063724518]
+    - **backbone.blocks.6.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.039237067103385925, -0.03925030305981636, 0.00271453894674778, 0.04070273041725159, -0.01752210222184658]
+    - **backbone.blocks.6.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.3623131513595581, -0.3368387222290039, -1.2625428438186646, -1.1656252145767212, -1.9078505039215088]
+    - **backbone.blocks.6.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.03968339040875435, -0.035921644419431686, 0.18057796359062195, -0.016972484067082405, -0.0391281433403492]
+    - **backbone.blocks.6.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.1373867392539978, 0.27056795358657837, 0.5451663136482239, -0.1777905374765396, 0.050770439207553864]
+    - **backbone.blocks.7.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.23274429142475128, 0.22215630114078522, 0.7988079786300659, 0.22658371925354004, 0.0964328721165657]
+    - **backbone.blocks.7.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.06727958470582962, -0.04784839600324631, -0.016513394191861153, 0.0030759507790207863, -0.0005661308532580733]
+    - **backbone.blocks.7.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.006464362144470215, 0.0051987734623253345, -0.0014414646429941058, 0.0145671172067523, -0.013799130916595459]
+    - **backbone.blocks.7.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.038737110793590546, 0.19917456805706024, 0.17413422465324402, 0.001781939878128469, 0.07480085641145706]
+    - **backbone.blocks.7.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.008427361026406288, 0.0209308173507452, -0.027865994721651077, -0.004199872724711895, 0.04259331896901131]
+    - **backbone.blocks.7.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.1286599040031433, 0.2598816156387329, 0.3583342134952545, -0.1468254029750824, 0.037334468215703964]
+    - **backbone.blocks.7.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.4073568880558014, 0.4001798629760742, 0.022013870999217033, 0.29017767310142517, 0.3043719530105591]
+    - **backbone.blocks.7.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.10287274420261383, -0.027552880346775055, 0.023919550701975822, -0.03282942995429039, -0.005665332078933716]
+    - **backbone.blocks.7.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.024042019620537758, 0.012427168898284435, 0.01075984537601471, 0.039629701524972916, -0.00547135341912508]
+    - **backbone.blocks.7.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.18854233622550964, -0.781326413154602, -1.574796438217163, -0.36723941564559937, -1.2690714597702026]
+    - **backbone.blocks.7.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.02447611093521118, -0.01424392405897379, -0.01193803921341896, 0.0009063504403457046, -0.022892724722623825]
+    - **backbone.blocks.7.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.051700908690690994, 0.21494613587856293, 0.3797151446342468, -0.1875845491886139, 0.08474935591220856]
+    - **backbone.blocks.8.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.1845991164445877, 0.1878296136856079, 0.8706607818603516, 0.19062474370002747, 0.09064675122499466]
+    - **backbone.blocks.8.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04914809763431549, -0.04015326872467995, -0.06143511086702347, 0.007685583084821701, 0.007058021612465382]
+    - **backbone.blocks.8.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.020212918519973755, -0.010870091617107391, 0.18540740013122559, 0.00576338404789567, 0.010922886431217194]
+    - **backbone.blocks.8.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.47258347272872925, 0.17965058982372284, 0.06258271634578705, -0.06786035001277924, -0.3685387969017029]
+    - **backbone.blocks.8.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0193687304854393, -0.009681303054094315, 0.04137350618839264, 0.001956883817911148, 0.0138523168861866]
+    - **backbone.blocks.8.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.07866401225328445, 0.21898208558559418, 0.38279181718826294, -0.1479378044605255, 0.1043408066034317]
+    - **backbone.blocks.8.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.4074758291244507, 0.3788875937461853, 0.2444559633731842, 0.31151726841926575, 0.2650196850299835]
+    - **backbone.blocks.8.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.07850276678800583, -0.028559384867548943, -0.008373260498046875, -0.028988070785999298, -0.001821335987187922]
+    - **backbone.blocks.8.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.11290620267391205, -0.08316906541585922, -0.0026518404483795166, 0.03195229545235634, -0.04705722630023956]
+    - **backbone.blocks.8.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.6536129117012024, -1.3209295272827148, -0.8419525027275085, -1.2900402545928955, -1.1548374891281128]
+    - **backbone.blocks.8.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.07467275857925415, 0.0030716140754520893, -0.039536911994218826, 0.031005077064037323, -0.00843556597828865]
+    - **backbone.blocks.8.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04757502302527428, 0.09929559379816055, 0.4003550112247467, -0.166150763630867, 0.1057099997997284]
+    - **backbone.blocks.9.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.2285783886909485, 0.20169465243816376, 1.1770391464233398, 0.1972372680902481, 0.0809066966176033]
+    - **backbone.blocks.9.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0579741895198822, -0.04234268143773079, -0.056681886315345764, 0.016009852290153503, 0.0038178840186446905]
+    - **backbone.blocks.9.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.014130095019936562, -0.010514368303120136, 0.007252329494804144, 0.0028578026685863733, -0.00423645693808794]
+    - **backbone.blocks.9.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.1621682345867157, 0.19134968519210815, -0.053531281650066376, 0.34272047877311707, 0.14959731698036194]
+    - **backbone.blocks.9.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.01595284603536129, -0.019891921430826187, -0.015728194266557693, -0.007074856664985418, -0.04019195958971977]
+    - **backbone.blocks.9.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.1129499226808548, 0.15644434094429016, 0.37231406569480896, -0.13444900512695312, 0.095189169049263]
+    - **backbone.blocks.9.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.3869386315345764, 0.357571542263031, 0.29498666524887085, 0.35077986121177673, 0.26228708028793335]
+    - **backbone.blocks.9.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08743473887443542, -0.058509111404418945, -0.009349183179438114, -0.013664896599948406, -0.014521552249789238]
+    - **backbone.blocks.9.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.06510370969772339, -0.04110954329371452, -0.013264034874737263, -0.013541284017264843, -0.05663233622908592]
+    - **backbone.blocks.9.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9518216252326965, -0.5383061170578003, -0.37640389800071716, -0.2953815460205078, -1.2635631561279297]
+    - **backbone.blocks.9.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.004769840743392706, -0.0058784219436347485, 0.1635383665561676, -0.006980272009968758, 0.039128296077251434]
+    - **backbone.blocks.9.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.037933267652988434, 0.14829270541667938, 0.4035114347934723, -0.13615931570529938, 0.05173471197485924]
+    - **backbone.blocks.10.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.2069031298160553, 0.1996804028749466, 1.0802257061004639, 0.18923699855804443, 0.1045188158750534]
+    - **backbone.blocks.10.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.042961396276950836, -0.04107923433184624, -0.07568076252937317, 0.017680741846561432, 0.0030041439458727837]
+    - **backbone.blocks.10.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.013310030102729797, -0.04397771507501602, 0.014073411002755165, -0.009819519706070423, -0.02003771997988224]
+    - **backbone.blocks.10.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.0015598819591104984, -0.07865072786808014, 1.339658260345459, -0.12682610750198364, 0.05478318780660629]
+    - **backbone.blocks.10.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.03165963664650917, 0.014713200740516186, 0.01816968247294426, 0.02189534157514572, 0.032827481627464294]
+    - **backbone.blocks.10.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.01663788966834545, 0.20158830285072327, 0.24005311727523804, -0.13244284689426422, -0.005591792985796928]
+    - **backbone.blocks.10.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.3008825182914734, 0.26941001415252686, -0.002750084735453129, 0.2573440670967102, 0.16741088032722473]
+    - **backbone.blocks.10.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.036179959774017334, -0.0693049505352974, 0.0010815932182595134, 0.008914805017411709, -0.003847655840218067]
+    - **backbone.blocks.10.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.010059681721031666, -0.04367827624082565, 0.004407057538628578, -0.006175387185066938, 0.04843767732381821]
+    - **backbone.blocks.10.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.2774854898452759, -0.8208574056625366, -1.6244436502456665, -0.40108373761177063, -0.7325976490974426]
+    - **backbone.blocks.10.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.015004146844148636, 0.04386249557137489, -0.00868855882436037, 0.00423680804669857, 0.011522620916366577]
+    - **backbone.blocks.10.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.01484174095094204, 0.11539158225059509, 0.2897860109806061, -0.18909971415996552, -0.07095728069543839]
+    - **backbone.blocks.11.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.2665398418903351, 0.24154609441757202, 0.5254694819450378, 0.19831568002700806, 0.14207172393798828]
+    - **backbone.blocks.11.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.034624189138412476, -0.05943765863776207, -0.029003912582993507, 0.02465309388935566, 0.014697300270199776]
+    - **backbone.blocks.11.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.042421963065862656, -0.007486399263143539, -0.19519345462322235, -0.07009249180555344, 0.031208794564008713]
+    - **backbone.blocks.11.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.29464438557624817, -0.1582350730895996, 1.343787431716919, -0.06852305680513382, 0.18421347439289093]
+    - **backbone.blocks.11.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.05134177207946777, -0.029807310551404953, -0.03319627791643143, 0.04543470963835716, -0.0517972894012928]
+    - **backbone.blocks.11.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.08899236470460892, 0.2924000918865204, 0.17643600702285767, -0.16929925978183746, -0.06826125085353851]
+    - **backbone.blocks.11.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.20759862661361694, 0.18989737331867218, 0.024794047698378563, 0.17422614991664886, 0.13421331346035004]
+    - **backbone.blocks.11.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04680946469306946, -0.023663977161049843, 0.021718567237257957, -0.029616517946124077, 0.025026336312294006]
+    - **backbone.blocks.11.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.004564928822219372, 0.0036222650669515133, -0.0304272398352623, 0.02949235402047634, -0.005814204923808575]
+    - **backbone.blocks.11.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.4773221015930176, -0.9841011762619019, -1.1017357110977173, -0.41118475794792175, -0.31804725527763367]
+    - **backbone.blocks.11.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.01998850516974926, 0.025489168241620064, -0.011703516356647015, -0.009851164184510708, -0.02611597068607807]
+    - **backbone.blocks.11.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.11792248487472534, 0.2192298024892807, 0.21424996852874756, -0.19071513414382935, -0.10375216603279114]
+    - **backbone.blocks.12.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.14279893040657043, 0.1281600445508957, 0.5134661793708801, 0.11729854345321655, 0.09458950161933899]
+    - **backbone.blocks.12.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.024817047640681267, -0.059641823172569275, -0.007663807366043329, 0.013631392270326614, 0.022321604192256927]
+    - **backbone.blocks.12.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.023471981287002563, -0.02465938962996006, 0.005122995004057884, -0.006686522625386715, -0.07472986727952957]
+    - **backbone.blocks.12.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.25532299280166626, 0.38234931230545044, 0.03639429435133934, -0.05370200797915459, 0.31898975372314453]
+    - **backbone.blocks.12.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.042210210114717484, 0.01040140725672245, -0.00558226415887475, -0.0005959054687991738, 0.0024555251002311707]
+    - **backbone.blocks.12.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.1374015361070633, 0.2844336926937103, 0.13159076869487762, -0.21135655045509338, -0.10276366025209427]
+    - **backbone.blocks.12.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.13409487903118134, 0.12493623048067093, 0.026781899854540825, 0.11899745464324951, 0.08693947643041611]
+    - **backbone.blocks.12.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04779065400362015, -0.01176506094634533, 0.035692453384399414, -0.06061561778187752, 0.038575492799282074]
+    - **backbone.blocks.12.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.012179702520370483, -0.004002298694103956, 0.02889418788254261, 0.0021836801897734404, 0.012355616316199303]
+    - **backbone.blocks.12.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.5282875299453735, -1.5025659799575806, -1.4573547840118408, -0.5785502791404724, -1.204864740371704]
+    - **backbone.blocks.12.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.02116129733622074, -0.03578650578856468, 0.004995956085622311, -0.0008233076077885926, -0.009211345575749874]
+    - **backbone.blocks.12.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.14722469449043274, 0.17879490554332733, 0.22579486668109894, -0.18607068061828613, -0.09006688743829727]
+    - **backbone.blocks.13.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.11578218638896942, 0.1041053980588913, 0.2696877419948578, 0.062310151755809784, 0.046339984983205795]
+    - **backbone.blocks.13.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.016611909493803978, -0.03712761774659157, 0.022707920521497726, 0.009213054552674294, 0.011551238596439362]
+    - **backbone.blocks.13.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.0032080733217298985, 0.0032226694747805595, 0.017336254939436913, 0.01812451146543026, 0.051780447363853455]
+    - **backbone.blocks.13.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.7009629607200623, 0.45114636421203613, -0.10041327029466629, 0.13895687460899353, 0.4644376039505005]
+    - **backbone.blocks.13.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.012899033725261688, 0.0035537555813789368, -0.029583221301436424, -0.009393122978508472, -0.012920880690217018]
+    - **backbone.blocks.13.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.15984369814395905, 0.2295352965593338, 0.12521444261074066, -0.19774776697158813, -0.036515012383461]
+    - **backbone.blocks.13.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.10999220609664917, 0.12444254010915756, 0.02958551235496998, 0.07792815566062927, 0.0936577320098877]
+    - **backbone.blocks.13.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.06896170228719711, 0.05251075327396393, 0.07727620005607605, -0.10704740136861801, 0.069689080119133]
+    - **backbone.blocks.13.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.020375732332468033, -0.07495813071727753, -0.0328967310488224, 0.008142950013279915, -0.0757456049323082]
+    - **backbone.blocks.13.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.5116424560546875, -1.2730258703231812, -0.2482161968946457, -1.2416720390319824, -0.2524483799934387]
+    - **backbone.blocks.13.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.008306547068059444, -0.007842594757676125, -0.014292481355369091, -0.01577453874051571, -0.017721040174365044]
+    - **backbone.blocks.13.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.17588062584400177, 0.14229005575180054, 0.23713292181491852, -0.15124545991420746, -0.032097227871418]
+    - **backbone.blocks.14.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.15830180048942566, 0.12018396705389023, 0.16174902021884918, 0.10234470665454865, 0.0547395795583725]
+    - **backbone.blocks.14.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.023923717439174652, -0.05211322382092476, 0.0009217308252118528, 0.014275560155510902, 0.019063325598835945]
+    - **backbone.blocks.14.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.06250400096178055, 0.02418436110019684, -0.007693191058933735, -0.014657662250101566, 0.04788052290678024]
+    - **backbone.blocks.14.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.356381893157959, -0.4522959291934967, 0.2587188184261322, -0.11911646276712418, 0.17816466093063354]
+    - **backbone.blocks.14.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.01195455901324749, 0.01908745989203453, 0.027149563655257225, -0.011385575868189335, 0.014912120066583157]
+    - **backbone.blocks.14.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.11617549508810043, 0.1634807288646698, 0.1840672791004181, -0.17199057340621948, 0.03951185196638107]
+    - **backbone.blocks.14.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.09728001058101654, 0.12170557677745819, 0.021253885701298714, 0.07803063839673996, 0.0840848833322525]
+    - **backbone.blocks.14.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08295115828514099, 0.06580071896314621, 0.10411452502012253, -0.12930037081241608, 0.08379973471164703]
+    - **backbone.blocks.14.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0005757606704719365, -0.022688040509819984, -0.0337352454662323, 0.03279545158147812, -0.0665474683046341]
+    - **backbone.blocks.14.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9214407801628113, -1.1429193019866943, -1.3587242364883423, -1.2527172565460205, -0.7010706067085266]
+    - **backbone.blocks.14.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.03807099163532257, -0.009881610050797462, 0.0011675209971144795, -0.0015966591890901327, 0.04078187048435211]
+    - **backbone.blocks.14.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.15905551612377167, 0.07886936515569687, 0.24117319285869598, -0.13001210987567902, 0.08083120733499527]
+    - **backbone.blocks.15.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.13622529804706573, 0.11040031909942627, 0.052218008786439896, 0.09447547048330307, 0.05921797454357147]
+    - **backbone.blocks.15.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.019662387669086456, -0.05027031898498535, -0.0027748679276555777, 0.01700596883893013, 0.015621577389538288]
+    - **backbone.blocks.15.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.009670507162809372, 0.014789239503443241, -0.055503200739622116, -0.017812468111515045, -0.03586249426007271]
+    - **backbone.blocks.15.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.005308319348841906, 0.037579238414764404, -0.11688538640737534, -0.07211010903120041, -0.17348924279212952]
+    - **backbone.blocks.15.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.00901557132601738, 0.012155753560364246, -0.012830081395804882, 0.0015160535695031285, 0.009793682023882866]
+    - **backbone.blocks.15.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.13383348286151886, 0.08849487453699112, 0.1955803483724594, -0.12796762585639954, 0.1119062751531601]
+    - **backbone.blocks.15.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.105191670358181, 0.1158011332154274, 0.024903427809476852, 0.080338254570961, 0.0842694565653801]
+    - **backbone.blocks.15.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.05896458402276039, 0.027621597051620483, 0.12437576800584793, -0.11333387345075607, 0.05498591437935829]
+    - **backbone.blocks.15.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.010179473087191582, 0.009276682510972023, -0.025696199387311935, 0.04788816720247269, 0.009586545638740063]
+    - **backbone.blocks.15.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.3027902841567993, -0.1850019246339798, -0.939100444316864, -1.0046583414077759, -0.9546239376068115]
+    - **backbone.blocks.15.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.04174197092652321, -0.008674563840031624, -0.020504890009760857, 0.01653929427266121, 0.007569118868559599]
+    - **backbone.blocks.15.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.13534080982208252, -0.024792123585939407, 0.2140129953622818, -0.097079798579216, 0.11462000012397766]
+    - **backbone.blocks.16.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.12135448306798935, 0.10678696632385254, 0.03788222745060921, 0.10391075909137726, 0.05829736590385437]
+    - **backbone.blocks.16.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.024688975885510445, -0.05117334425449371, -0.0016853975830599666, 0.023388776928186417, 0.010868968442082405]
+    - **backbone.blocks.16.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0006145061925053596, 0.02191055379807949, 0.01854982227087021, -0.007182728033512831, 0.023680686950683594]
+    - **backbone.blocks.16.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.021521758288145065, 0.14401136338710785, -0.343135803937912, 0.032749518752098083, 0.19047972559928894]
+    - **backbone.blocks.16.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.027572033926844597, 0.02118624560534954, 0.015352596528828144, -0.0009306000429205596, -0.031642258167266846]
+    - **backbone.blocks.16.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.12853941321372986, 0.07209756970405579, 0.16159594058990479, -0.11207561939954758, 0.17206954956054688]
+    - **backbone.blocks.16.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.11178076267242432, 0.1168435662984848, 0.5469339489936829, 0.07786764949560165, 0.08406221121549606]
+    - **backbone.blocks.16.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.055493298918008804, -0.01296484749764204, 0.01961609162390232, -0.08955926448106766, 0.05737405642867088]
+    - **backbone.blocks.16.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.04321034625172615, -0.006927055306732655, 0.009831304661929607, -0.02172252908349037, -0.04980940744280815]
+    - **backbone.blocks.16.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.949604332447052, -0.9502818584442139, -1.1552112102508545, -0.8183920383453369, -0.5157775282859802]
+    - **backbone.blocks.16.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.0069086747244000435, 0.009118273854255676, -0.026509705930948257, -0.0039238091558218, 0.035846203565597534]
+    - **backbone.blocks.16.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.10653059184551239, -0.038321126252412796, 0.1975979059934616, -0.08425454050302505, 0.16647525131702423]
+    - **backbone.blocks.17.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.09874277561903, 0.09215735644102097, 0.6824160814285278, 0.06064065918326378, 0.04694502800703049]
+    - **backbone.blocks.17.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.02163570560514927, -0.041848134249448776, -0.04144669696688652, 0.010537560097873211, 0.00765516422688961]
+    - **backbone.blocks.17.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.016285333782434464, -0.016504185274243355, 0.005655094049870968, 0.009918048046529293, 0.02676110714673996]
+    - **backbone.blocks.17.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.17581962049007416, 0.17950347065925598, -0.06286200135946274, 0.23653867840766907, -0.039245281368494034]
+    - **backbone.blocks.17.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.024711981415748596, -0.002712106565013528, -0.018656888976693153, 0.022934209555387497, -0.01962227374315262]
+    - **backbone.blocks.17.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.048849355429410934, -0.007863475941121578, 0.22114665806293488, -0.10774936527013779, 0.20473825931549072]
+    - **backbone.blocks.17.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.14049766957759857, 0.1515112817287445, 0.02649185061454773, 0.11987057328224182, 0.11786346137523651]
+    - **backbone.blocks.17.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08008891344070435, -0.01778273470699787, 0.13018283247947693, -0.09226897358894348, 0.03286197781562805]
+    - **backbone.blocks.17.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.019657310098409653, 0.0958172157406807, -0.014313524588942528, 0.06672235578298569, -0.06127540394663811]
+    - **backbone.blocks.17.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.8742601871490479, -1.124192714691162, -1.000382423400879, -1.0526065826416016, -0.9180256128311157]
+    - **backbone.blocks.17.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.028693245723843575, -0.0058207521215081215, 0.0037614740431308746, 0.011335721239447594, 0.002713747089728713]
+    - **backbone.blocks.17.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.03786248713731766, -0.10901439934968948, 0.2635759115219116, -0.07031168788671494, 0.1905725747346878]
+    - **backbone.blocks.18.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.11377307027578354, 0.10645043104887009, 0.38202962279319763, 0.09204104542732239, 0.06782252341508865]
+    - **backbone.blocks.18.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.020578011870384216, -0.04489025101065636, -0.013258642517030239, 0.019968099892139435, 0.005314147099852562]
+    - **backbone.blocks.18.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.006379101425409317, 0.039442028850317, 0.014279577881097794, 0.009022503159940243, 0.03452524170279503]
+    - **backbone.blocks.18.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.017044881358742714, -0.012124667875468731, -0.18648158013820648, -0.0921526849269867, 0.02208259142935276]
+    - **backbone.blocks.18.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.011581970378756523, 0.04802636057138443, 0.05393332615494728, -0.0057951402850449085, 0.006102235056459904]
+    - **backbone.blocks.18.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.01499989815056324, -0.07508192211389542, 0.1680830419063568, -0.06233758106827736, 0.2502661347389221]
+    - **backbone.blocks.18.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.19307748973369598, 0.20604296028614044, 0.02842153050005436, 0.1686866581439972, 0.21604277193546295]
+    - **backbone.blocks.18.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08759304136037827, -0.05316006392240524, 0.16429510712623596, -0.09454505890607834, 0.003008705796673894]
+    - **backbone.blocks.18.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.003964994568377733, 0.026573888957500458, -0.047719016671180725, -0.006295202765613794, 0.02858617715537548]
+    - **backbone.blocks.18.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.041587471961975, -0.8780557513237, -0.8313536643981934, -0.7624662518501282, -0.8493767976760864]
+    - **backbone.blocks.18.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.024292970076203346, 0.030174629762768745, -0.0038586221635341644, 0.033931002020835876, -0.06503944844007492]
+    - **backbone.blocks.18.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.04502987116575241, -0.158319354057312, 0.2042132467031479, -0.02078750543296337, 0.24736517667770386]
+    - **backbone.blocks.19.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.13953162729740143, 0.14068524539470673, 0.6893004775047302, 0.10552216321229935, 0.06507179141044617]
+    - **backbone.blocks.19.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.02472144365310669, -0.03721221908926964, -0.04126518592238426, 0.018164681270718575, 0.0021354861091822386]
+    - **backbone.blocks.19.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.051562607288360596, -0.02494720183312893, -0.019939865916967392, 0.029704365879297256, -0.011440505273640156]
+    - **backbone.blocks.19.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.3943154215812683, 0.15914374589920044, -3.615933895111084, 0.18933261930942535, 0.11180005967617035]
+    - **backbone.blocks.19.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.024680502712726593, 0.03102305717766285, 0.014414106495678425, -0.013337243348360062, -0.006644335109740496]
+    - **backbone.blocks.19.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.010863902978599072, -0.13656067848205566, 0.16685493290424347, -0.031454939395189285, 0.27504274249076843]
+    - **backbone.blocks.19.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.2351938933134079, 0.22654467821121216, 0.034869302064180374, 0.19143055379390717, 0.21137721836566925]
+    - **backbone.blocks.19.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.06539440155029297, -0.05243491753935814, 0.12993483245372772, -0.0565030500292778, 0.01859351247549057]
+    - **backbone.blocks.19.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.011335276998579502, -0.01843082532286644, -0.014781426638364792, -0.0035078953951597214, -0.02414444461464882]
+    - **backbone.blocks.19.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9313048124313354, -0.7138983607292175, -1.0173211097717285, -0.8582419753074646, -0.9554039239883423]
+    - **backbone.blocks.19.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.0067923711612820625, 0.009702254086732864, -0.03506290912628174, -0.022428222000598907, 0.0023652110248804092]
+    - **backbone.blocks.19.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.007867845706641674, -0.2208855301141739, 0.1927398294210434, -0.0033219626639038324, 0.1945713609457016]
+    - **backbone.blocks.20.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.21990159153938293, 0.16887375712394714, 0.5608074069023132, 0.1742057502269745, 0.11396230757236481]
+    - **backbone.blocks.20.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.034898802638053894, -0.0440182127058506, -0.010175823234021664, 0.04120040312409401, -0.0008773965528234839]
+    - **backbone.blocks.20.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.03137236833572388, -0.060085538774728775, -0.014030935242772102, -0.035139184445142746, 0.00882701575756073]
+    - **backbone.blocks.20.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.06540709733963013, 0.7469398975372314, -0.2380647510290146, -0.16811321675777435, -0.06441649049520493]
+    - **backbone.blocks.20.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.00432418892160058, -0.02594122290611267, 0.0012773012276738882, 0.011214504018425941, -0.020168695598840714]
+    - **backbone.blocks.20.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.025890180841088295, -0.09441357105970383, 0.12112810462713242, -0.04033028706908226, 0.2110476791858673]
+    - **backbone.blocks.20.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.29115259647369385, 0.2973107099533081, 0.043104808777570724, 0.25278300046920776, 0.30394408106803894]
+    - **backbone.blocks.20.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.08865775913000107, -0.06698202341794968, 0.1313987821340561, -0.053623419255018234, -0.009093642234802246]
+    - **backbone.blocks.20.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.004142270423471928, 0.033973388373851776, -0.01951618678867817, -0.003104262286797166, 0.003474498400464654]
+    - **backbone.blocks.20.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9212549924850464, -0.810260534286499, -1.5244866609573364, -1.0583046674728394, -0.6348001956939697]
+    - **backbone.blocks.20.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.01272624358534813, 0.03445492684841156, 0.04985516145825386, -0.009518962353467941, -0.014932594262063503]
+    - **backbone.blocks.20.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.005604874342679977, -0.14032801985740662, 0.13498546183109283, -0.004745160695165396, 0.18350887298583984]
+    - **backbone.blocks.21.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.22548653185367584, 0.1883167326450348, 0.5911059379577637, 0.15346302092075348, 0.12811647355556488]
+    - **backbone.blocks.21.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.03616979718208313, -0.04547498747706413, -0.02354084700345993, 0.040395233780145645, -0.004623940214514732]
+    - **backbone.blocks.21.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.04700080305337906, 0.008947725407779217, 0.018988020718097687, -0.009142023511230946, 0.013183921575546265]
+    - **backbone.blocks.21.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.0027197636663913727, -0.04746036231517792, -0.03812265023589134, 0.01479655597358942, 0.11512919515371323]
+    - **backbone.blocks.21.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.0019358460558578372, -0.004258145112544298, 0.00699622044339776, -0.00644152145832777, 0.008130589500069618]
+    - **backbone.blocks.21.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.028070034459233284, -0.05984743312001228, 0.18480542302131653, -0.01653767190873623, 0.20770227909088135]
+    - **backbone.blocks.21.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.3296802341938019, 0.30599087476730347, 0.058999598026275635, 0.2745622992515564, 0.30203890800476074]
+    - **backbone.blocks.21.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.09991275519132614, -0.09994997829198837, 0.12425188720226288, -0.08184310048818588, -0.03365268558263779]
+    - **backbone.blocks.21.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.008658214472234249, 0.007135902997106314, -0.000370664318324998, 0.007249077316373587, 0.003080584341660142]
+    - **backbone.blocks.21.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.7132124304771423, -0.9934064745903015, -0.2389732152223587, -1.303209662437439, -0.9271467328071594]
+    - **backbone.blocks.21.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.01839233934879303, 0.02462289296090603, -0.022514590993523598, -0.003338378854095936, -0.05785286799073219]
+    - **backbone.blocks.21.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.013255861587822437, -0.10792011767625809, 0.18915989995002747, 0.009977059438824654, 0.17303036153316498]
+    - **backbone.blocks.22.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.17712384462356567, 0.190789133310318, 0.5368499755859375, 0.123670794069767, 0.12888027727603912]
+    - **backbone.blocks.22.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.012372765690088272, -0.026173854246735573, -0.02305111289024353, 0.030999580398201942, -0.010484381578862667]
+    - **backbone.blocks.22.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.042699262499809265, 0.00042388058500364423, -0.009074917063117027, 0.004649646580219269, -0.029750347137451172]
+    - **backbone.blocks.22.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.19222933053970337, 0.0016558646457269788, 0.3558427095413208, 0.013509776443243027, -0.3598378300666809]
+    - **backbone.blocks.22.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.005480560008436441, -0.0001432656281394884, -0.005121567752212286, -0.0012548071099445224, 0.0057059177197515965]
+    - **backbone.blocks.22.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.03516603261232376, -0.10851304233074188, 0.1542797088623047, -0.022144977003335953, 0.19461634755134583]
+    - **backbone.blocks.22.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.35659414529800415, 0.34922221302986145, 0.07565873861312866, 0.27797943353652954, 0.3568965494632721]
+    - **backbone.blocks.22.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0468931645154953, -0.09688069671392441, 0.0841342881321907, -0.04079015925526619, -0.030539799481630325]
+    - **backbone.blocks.22.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.026185879483819008, -0.011337503790855408, -0.019606633111834526, 0.003250591456890106, 0.021395739167928696]
+    - **backbone.blocks.22.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.3204595148563385, -1.0352210998535156, -0.9340096116065979, -0.8537980318069458, -0.194818377494812]
+    - **backbone.blocks.22.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.01838025636970997, -0.014001978561282158, 0.0184731874614954, -0.004500104580074549, -0.00916649866849184]
+    - **backbone.blocks.22.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0016556991031393409, -0.13760656118392944, 0.1438983678817749, 0.0069455369375646114, 0.1552717238664627]
+    - **backbone.blocks.23.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.24063463509082794, 0.25937145948410034, 0.7050279974937439, 0.1887388825416565, 0.1344996690750122]
+    - **backbone.blocks.23.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.011682014912366867, -0.03671689331531525, -0.11755222827196121, 0.04157012328505516, -0.012339172884821892]
+    - **backbone.blocks.23.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.005877377465367317, 0.03423649072647095, 0.01819787733256817, -0.012486348859965801, 0.018640678375959396]
+    - **backbone.blocks.23.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.04755939170718193, -0.10428140312433243, 0.046776194125413895, -0.6471328735351562, -0.10767173767089844]
+    - **backbone.blocks.23.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.008341044187545776, 0.026466691866517067, 0.02197684347629547, -0.01000829879194498, -0.021756798028945923]
+    - **backbone.blocks.23.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.05154511705040932, -0.1074632927775383, 0.30661115050315857, 0.005436065141111612, 0.19133026897907257]
+    - **backbone.blocks.23.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.37299609184265137, 0.3538159430027008, 0.07943198084831238, 0.28096866607666016, 0.322572261095047]
+    - **backbone.blocks.23.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.07634706050157547, -0.1178107038140297, 0.13784995675086975, -0.09236742556095123, -0.04153729975223541]
+    - **backbone.blocks.23.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.00631870049983263, -0.00012514798436313868, -0.01754496991634369, 0.000370834197383374, 0.004743163473904133]
+    - **backbone.blocks.23.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.5470870733261108, -0.4866592288017273, -0.5511161684989929, -0.6850907206535339, -0.6716715693473816]
+    - **backbone.blocks.23.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.0021193544380366802, 0.014414779841899872, 0.0037067898083478212, 0.018390139564871788, 0.007611854933202267]
+    - **backbone.blocks.23.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.010527475737035275, -0.13922932744026184, 0.2991058826446533, 0.028075477108359337, 0.13185124099254608]
+    - **backbone.blocks.24.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.296396404504776, 0.30802056193351746, 0.35865211486816406, 0.21648235619068146, 0.13083302974700928]
+    - **backbone.blocks.24.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.024671385064721107, -0.0490696020424366, -0.07384420931339264, 0.0649251639842987, -0.008039367385208607]
+    - **backbone.blocks.24.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.033429451286792755, -0.05373286083340645, -0.010704200714826584, -0.03666410222649574, -0.02472352609038353]
+    - **backbone.blocks.24.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.0951315388083458, 0.10037775337696075, -0.15594662725925446, -0.08454947173595428, -0.16534699499607086]
+    - **backbone.blocks.24.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.032111555337905884, -0.005723639857023954, 0.01773269660770893, 0.004884370602667332, 0.005698689259588718]
+    - **backbone.blocks.24.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.026302926242351532, -0.05125385895371437, 0.23687314987182617, -0.0004456090973690152, 0.1667833775281906]
+    - **backbone.blocks.24.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.37396302819252014, 0.4176323115825653, 0.07630772143602371, 0.311114639043808, 0.3361806869506836]
+    - **backbone.blocks.24.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.07760420441627502, -0.1270429939031601, 0.0932709351181984, -0.10030906647443771, -0.07700196653604507]
+    - **backbone.blocks.24.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.00022638545488007367, -0.026927877217531204, -0.029387161135673523, 0.02080158144235611, -0.003914692904800177]
+    - **backbone.blocks.24.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.0345629453659058, -0.22057652473449707, -0.4794061779975891, -1.0099109411239624, -0.722600519657135]
+    - **backbone.blocks.24.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.01615225523710251, 0.02353133074939251, -0.0015766806900501251, 0.007475206628441811, 0.056705012917518616]
+    - **backbone.blocks.24.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.0037434736732393503, -0.07184915989637375, 0.21975676715373993, 0.00719910953193903, 0.13825352489948273]
+    - **backbone.blocks.25.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.29421329498291016, 0.3376757502555847, 0.8228322863578796, 0.27441179752349854, 0.15910086035728455]
+    - **backbone.blocks.25.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.004961276892572641, -0.03172457590699196, -0.12872277200222015, 0.057551465928554535, -0.021704651415348053]
+    - **backbone.blocks.25.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.02946249209344387, 0.004760615527629852, -0.01691807620227337, 0.022560443729162216, 0.012933487072587013]
+    - **backbone.blocks.25.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.040580738335847855, 0.3320455253124237, -0.03727575019001961, 0.055113181471824646, 0.1123700737953186]
+    - **backbone.blocks.25.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.08034241944551468, 0.019888661801815033, 0.03455942124128342, 0.038473743945360184, 0.01577047072350979]
+    - **backbone.blocks.25.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.018712304532527924, -0.006530888844281435, 0.1909848302602768, -0.024732476100325584, 0.14227654039859772]
+    - **backbone.blocks.25.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.43976616859436035, 0.43585920333862305, 0.10940608382225037, 0.3934973478317261, 0.3375474810600281]
+    - **backbone.blocks.25.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04247492179274559, -0.10563092678785324, 0.13551056385040283, -0.10123942047357559, -0.07775943726301193]
+    - **backbone.blocks.25.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.009317289106547832, 0.008580164052546024, -0.008578788489103317, 0.010549553669989109, -0.00451365951448679]
+    - **backbone.blocks.25.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.6198195219039917, -0.6580123901367188, -1.0726521015167236, -1.2989788055419922, -1.303296446800232]
+    - **backbone.blocks.25.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.010428452864289284, 0.014052198268473148, 0.0020481336396187544, 0.010699119418859482, 0.023709001019597054]
+    - **backbone.blocks.25.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0006749496096745133, -0.10870140045881271, 0.1855800747871399, -0.021109040826559067, 0.09824971109628677]
+    - **backbone.blocks.26.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.20250219106674194, 0.2538582980632782, 0.749362587928772, 0.1695268303155899, 0.077756367623806]
+    - **backbone.blocks.26.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.01461259089410305, -0.005740250926464796, -0.20309747755527496, 0.03763215243816376, -0.007140892092138529]
+    - **backbone.blocks.26.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.007890400476753712, 0.0028923091012984514, -0.016129210591316223, -0.01576218754053116, -0.009329184889793396]
+    - **backbone.blocks.26.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.3059917092323303, -0.20202718675136566, -0.020788826048374176, 0.11612948775291443, 0.15089881420135498]
+    - **backbone.blocks.26.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.012667534872889519, -0.020243899896740913, -0.0022480739280581474, -0.009368001483380795, -0.013722040690481663]
+    - **backbone.blocks.26.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.021633321419358253, -0.09223242104053497, 0.21812808513641357, 0.011040868237614632, 0.12882643938064575]
+    - **backbone.blocks.26.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.4563430845737457, 0.4520695209503174, 0.11837077140808105, 0.42047733068466187, 0.3747485876083374]
+    - **backbone.blocks.26.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.06983474642038345, -0.1442490667104721, 0.09177853912115097, -0.08879142999649048, -0.06082294508814812]
+    - **backbone.blocks.26.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.003597391303628683, 0.007222539279609919, -0.003863818245008588, 0.004294144455343485, -0.002703440375626087]
+    - **backbone.blocks.26.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.950034499168396, -0.9287616014480591, -0.6861801147460938, -0.5813611745834351, -1.1305433511734009]
+    - **backbone.blocks.26.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.0013123434036970139, 0.013158580288290977, -0.02145412750542164, -0.005142570938915014, -0.023238826543092728]
+    - **backbone.blocks.26.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.002413982292637229, -0.145236998796463, 0.21834641695022583, -0.0021439476404339075, 0.08994565904140472]
+    - **backbone.blocks.27.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.3260969817638397, 0.34554964303970337, 0.3892532289028168, 0.2894745469093323, 0.2183888703584671]
+    - **backbone.blocks.27.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.012844577431678772, -0.025851480662822723, -0.0923229530453682, 0.0548386387526989, -0.025017058476805687]
+    - **backbone.blocks.27.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.0005384248797781765, -0.015953345224261284, -0.019061097875237465, -0.013750988990068436, 0.0012349521275609732]
+    - **backbone.blocks.27.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.07029008120298386, 0.11379991471767426, 0.09184335917234421, 0.05867557227611542, 0.4485832452774048]
+    - **backbone.blocks.27.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.007768189534544945, 0.004751711618155241, -0.0205013956874609, 0.007230488117784262, 0.016777124255895615]
+    - **backbone.blocks.27.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.02056291699409485, -0.13268734514713287, 0.2458229809999466, 0.013728153891861439, 0.08469261229038239]
+    - **backbone.blocks.27.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.5071004629135132, 0.550610363483429, 0.15083761513233185, 0.48609408736228943, 0.3658582866191864]
+    - **backbone.blocks.27.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.09531061351299286, -0.13757561147212982, 0.17511238157749176, -0.15160736441612244, -0.06787848472595215]
+    - **backbone.blocks.27.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.003952302969992161, 0.007894991897046566, -0.004270343575626612, 0.003703504800796509, -0.0020515676587820053]
+    - **backbone.blocks.27.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-1.9512536525726318, -0.4375697374343872, -0.6097750067710876, -1.963602900505066, -0.739083468914032]
+    - **backbone.blocks.27.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.00026400742353871465, 0.03149251267313957, 0.0009029654902406037, -0.0003635855100583285, 0.011141622439026833]
+    - **backbone.blocks.27.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.06300653517246246, -0.16588473320007324, 0.20823560655117035, -0.003153375117108226, 0.0776946097612381]
+    - **backbone.blocks.28.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.34694716334342957, 0.3444078266620636, 0.4477207660675049, 0.28008371591567993, 0.2189558744430542]
+    - **backbone.blocks.28.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.011052068322896957, 0.007499410770833492, -0.11022210121154785, 0.07547371089458466, -0.015009106136858463]
+    - **backbone.blocks.28.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.005655990913510323, -0.03274961933493614, 0.005139710381627083, 0.013356227427721024, -0.019369345158338547]
+    - **backbone.blocks.28.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.009150968864560127, -0.08921417593955994, -0.23245713114738464, 0.23361548781394958, 0.0018707688432186842]
+    - **backbone.blocks.28.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.001453111064620316, 0.01126882154494524, 0.018610773608088493, -0.00992001872509718, -0.0010303427698090672]
+    - **backbone.blocks.28.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.08085944503545761, -0.12905292212963104, 0.1457105278968811, 0.0304209403693676, 0.09564667195081711]
+    - **backbone.blocks.28.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.568385899066925, 0.611081600189209, 0.13805332779884338, 0.5495721101760864, 0.41070127487182617]
+    - **backbone.blocks.28.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04380369931459427, -0.14012856781482697, 0.1671738475561142, -0.08306369930505753, -0.0786624625325203]
+    - **backbone.blocks.28.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.0010918433545157313, 0.004364342428743839, -0.001410780125297606, 0.002337316982448101, -0.0005795853212475777]
+    - **backbone.blocks.28.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-2.3883354663848877, -0.6019654273986816, -0.546660840511322, -2.3668246269226074, -0.7831893563270569]
+    - **backbone.blocks.28.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-5.292411151458509e-05, 0.01696573570370674, -0.021269407123327255, -0.00015981632168404758, 0.003311611944809556]
+    - **backbone.blocks.28.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.12138108164072037, -0.16368882358074188, 0.11521533131599426, 0.016535824164748192, 0.0696970745921135]
+    - **backbone.blocks.29.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.4134599268436432, 0.433430552482605, 0.9791271686553955, 0.35588374733924866, 0.17611655592918396]
+    - **backbone.blocks.29.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.012939260341227055, -0.0016813582042232156, -0.20663461089134216, 0.08229156583547592, -0.013078157790005207]
+    - **backbone.blocks.29.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.011139906011521816, 0.010583717375993729, 0.01121519971638918, 0.01528022438287735, 0.004936216864734888]
+    - **backbone.blocks.29.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.17374452948570251, -0.22948376834392548, -0.06711307913064957, -0.12001382559537888, -0.022680507972836494]
+    - **backbone.blocks.29.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [0.008192216046154499, 0.012014389038085938, 0.03924771398305893, 0.023721124976873398, -0.00931065808981657]
+    - **backbone.blocks.29.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.09387446194887161, -0.12994436919689178, 0.15059007704257965, 0.041710782796144485, 0.07504446059465408]
+    - **backbone.blocks.29.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.6540009379386902, 0.6657793521881104, 0.1764119416475296, 0.6015447378158569, 0.3965529799461365]
+    - **backbone.blocks.29.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.051757995039224625, -0.12543602287769318, 0.13420839607715607, -0.04937300086021423, -0.05982726067304611]
+    - **backbone.blocks.29.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [0.0052589355036616325, -0.017587974667549133, -0.01579541712999344, 0.01762882061302662, -0.0007089562714099884]
+    - **backbone.blocks.29.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.9427032470703125, -0.8506460189819336, -0.652492105960846, -0.810339093208313, -0.8857663869857788]
+    - **backbone.blocks.29.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.009652040898799896, 0.005690062418580055, 0.001160742249339819, -0.016257263720035553, 0.002837342442944646]
+    - **backbone.blocks.29.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.1400342583656311, -0.11330817639827728, 0.12132281064987183, 0.026029814034700394, 0.02804611809551716]
+    - **backbone.blocks.30.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.44002798199653625, 0.4619208872318268, 0.2562916576862335, 0.37112876772880554, 0.22709204256534576]
+    - **backbone.blocks.30.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.016303183510899544, 0.01059808861464262, -0.08734846860170364, 0.08036822080612183, -0.043123986572027206]
+    - **backbone.blocks.30.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [-0.019627373665571213, -0.05069703608751297, 0.020296553149819374, -0.04572111740708351, -0.006133170332759619]
+    - **backbone.blocks.30.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [-0.6852729320526123, 0.008070913143455982, 0.13114719092845917, -0.48641735315322876, 0.008051753044128418]
+    - **backbone.blocks.30.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.003078840207308531, -0.013575546443462372, 0.00564933056011796, -0.00172336190007627, -0.00215141917578876]
+    - **backbone.blocks.30.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.14052248001098633, -0.07085397839546204, 0.0958612784743309, 0.06624094396829605, 0.023284096270799637]
+    - **backbone.blocks.30.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.7411092519760132, 0.6861441135406494, 0.36677882075309753, 0.6540093421936035, 0.4209790527820587]
+    - **backbone.blocks.30.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.0611104816198349, -0.07921721786260605, -0.03535429760813713, -0.10540465265512466, -0.10837212204933167]
+    - **backbone.blocks.30.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.00017808775010053068, 0.0007186600705608726, -0.0007836250006221235, 0.0017389130080118775, 0.00023904474801383913]
+    - **backbone.blocks.30.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-2.709807872772217, -2.727747917175293, -0.0589485689997673, -0.6822614073753357, -0.9440838098526001]
+    - **backbone.blocks.30.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [0.00112646643538028, 0.0010803804034367204, -0.005423591006547213, -0.004725262522697449, 0.011584523133933544]
+    - **backbone.blocks.30.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.1727772206068039, -0.06920386850833893, 0.06737323105335236, 0.07544142752885818, -0.04368290677666664]
+    - **backbone.blocks.31.norm1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.5238285660743713, 0.5061652064323425, 0.3553095757961273, 0.4622974395751953, 0.21796847879886627]
+    - **backbone.blocks.31.norm1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04813559353351593, 0.005263173021376133, -0.1382928043603897, 0.12412334978580475, -0.030327128246426582]
+    - **backbone.blocks.31.attn.qkv.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840, 1280]), dtype = torch.float32
+      - First 5 values: [0.019005179405212402, 0.014066126197576523, 0.01417512632906437, -0.019625136628746986, -0.005903285462409258]
+    - **backbone.blocks.31.attn.qkv.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([3840]), dtype = torch.float32
+      - First 5 values: [0.35293474793434143, -0.049578893929719925, -0.6291832327842712, -0.1512361615896225, -0.05598248168826103]
+    - **backbone.blocks.31.attn.proj.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 1280]), dtype = torch.float32
+      - First 5 values: [-0.004642294254153967, -0.010089348070323467, -0.00559585215523839, 0.017673462629318237, -0.009677532128989697]
+    - **backbone.blocks.31.attn.proj.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.17440593242645264, -0.040072452276945114, 0.09449175000190735, 0.061431750655174255, -0.015209208242595196]
+    - **backbone.blocks.31.norm2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.7896033525466919, 0.7710022330284119, 0.6156995892524719, 0.7413775324821472, 0.3425355553627014]
+    - **backbone.blocks.31.norm2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.04124822840094566, -0.13288405537605286, -0.4031781554222107, -0.17580771446228027, -0.07159973680973053]
+    - **backbone.blocks.31.mlp.fc1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120, 1280]), dtype = torch.float32
+      - First 5 values: [-0.0012294423067942262, 0.007635978981852531, -0.008142983540892601, 0.0031280810944736004, -0.014350706711411476]
+    - **backbone.blocks.31.mlp.fc1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([5120]), dtype = torch.float32
+      - First 5 values: [-0.6627378463745117, -0.9105795621871948, -0.4621141850948334, -0.5726250410079956, -0.4569525420665741]
+    - **backbone.blocks.31.mlp.fc2.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 5120]), dtype = torch.float32
+      - First 5 values: [-0.00413943687453866, 0.021560383960604668, -0.014457572251558304, -0.0007547774584963918, -0.00994078814983368]
+    - **backbone.blocks.31.mlp.fc2.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.1947976052761078, 0.08832406252622604, 0.1774246245622635, 0.08600199967622757, -0.22391322255134583]
+    - **backbone.last_norm.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [0.6448813080787659, 0.6039419770240784, 0.22145117819309235, 0.5313833355903625, 0.6733477115631104]
+    - **backbone.last_norm.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280]), dtype = torch.float32
+      - First 5 values: [-0.05354899913072586, -0.037517305463552475, -0.04058784246444702, -0.0130905257537961, 0.0422106571495533]
+    - **keypoint_head.deconv_layers.0.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([1280, 256, 4, 4]), dtype = torch.float32
+      - First 5 values: [-0.004990843590348959, -0.00037443742621690035, -0.02333182282745838, 0.026573138311505318, 0.00976036861538887]
+    - **keypoint_head.deconv_layers.1.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [1.0859358310699463, 1.2466435432434082, 0.7826942205429077, 0.8134272694587708, 0.8247992396354675]
+    - **keypoint_head.deconv_layers.1.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [0.035524990409612656, 0.18798492848873138, -0.4617905914783478, -0.501477062702179, -0.6054454445838928]
+    - **keypoint_head.deconv_layers.1.running_mean**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [-0.8967870473861694, -0.005878159310668707, -0.3856261670589447, -0.8016231656074524, -0.11988808214664459]
+    - **keypoint_head.deconv_layers.1.running_var**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [9.715689659118652, 22.6998291015625, 2.9139935970306396, 3.6884055137634277, 3.129617214202881]
+    - **keypoint_head.deconv_layers.1.num_batches_tracked**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([]), dtype = torch.int64
+      - First 5 values: [52740]
+    - **keypoint_head.deconv_layers.3.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256, 256, 4, 4]), dtype = torch.float32
+      - First 5 values: [0.022132370620965958, -0.00843289215117693, -0.010127168148756027, 0.0027400508988648653, -0.0056136371567845345]
+    - **keypoint_head.deconv_layers.4.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [0.9209424257278442, 0.8568291068077087, 0.8147856593132019, 0.8331848978996277, 0.8937792181968689]
+    - **keypoint_head.deconv_layers.4.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [-0.343151718378067, -0.3718053996562958, -0.35304543375968933, -0.3321293890476227, -0.17424039542675018]
+    - **keypoint_head.deconv_layers.4.running_mean**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [-1.0928337574005127, -0.9276264309883118, -0.5837978720664978, -1.008480191230774, 1.2362245321273804]
+    - **keypoint_head.deconv_layers.4.running_var**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([256]), dtype = torch.float32
+      - First 5 values: [1.0229889154434204, 0.7899817824363708, 1.0707769393920898, 1.2010406255722046, 1.813722848892212]
+    - **keypoint_head.deconv_layers.4.num_batches_tracked**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([]), dtype = torch.int64
+      - First 5 values: [52740]
+    - **keypoint_head.final_layer.weight**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([17, 256, 1, 1]), dtype = torch.float32
+      - First 5 values: [0.04014038294553757, 0.0031155128963291645, -0.00012807278835680336, -6.554735591635108e-05, -0.021892394870519638]
+    - **keypoint_head.final_layer.bias**: type = <class 'torch.Tensor'>
+      - Tensor shape: torch.Size([17]), dtype = torch.float32
+      - First 5 values: [-0.03303378447890282, -0.026052406057715416, -0.03428312763571739, -0.02600090391933918, -0.019418293610215187]
+

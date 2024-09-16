@@ -27,12 +27,13 @@ MODEL:
   IMAGE_MEAN: [0.485, 0.456, 0.406]
   IMAGE_STD: [0.229, 0.224, 0.225]
   BACKBONE:
-    TYPE: vit_small
-    PRETRAINED_WEIGHTS: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose_small.pth
+    TYPE: vit
+    # PRETRAINED_WEIGHTS: /home/max/Documents/4dh-img/hmr2_training_data/vitpose_backbone.pth
+    PRETRAINED_WEIGHTS: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-h.pth
     BACKBONE_TYPE:
       VITPOSE_H: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-h.pth
-      VITPOSE_L: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose_backbone.pth
-      VITPOSE_B: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose_backbone.pth
+      VITPOSE_L: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-l.pth
+      VITPOSE_B: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-b.pth
       VITPOSE_S: ${oc.env:HOME}/nas_drive/publicdatasets/backbones/vitpose-backbones/vitpose-s.pth
   SMPL_HEAD:
     TYPE: transformer_decoder
