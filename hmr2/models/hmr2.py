@@ -30,11 +30,19 @@ class HMR2(pl.LightningModule):
 
         self.cfg = cfg
         # Create backbone feature extractor
+        log.info(f'Creating backbone of type {cfg.MODEL.BACKBONE.TYPE}')
         self.backbone = create_backbone(cfg)
         if cfg.MODEL.BACKBONE.get('PRETRAINED_WEIGHTS', None): # Returns True if the key is present in the dictionary
-            self.backbone_path = cfg.MODEL.BACKBONE.PRETRAINED_WEIGHTS
+            if cfg.MODEL.BACKBONE.TYPE == 'vit':
+                self.backbone_path = cfg.MODEL.BACKBONE.BACKBONE_TYPE.VITPOSE_H
+            elif cfg.MODEL.BACKBONE.TYPE == 'vit_large':
+                self.backbone_path = cfg.MODEL.BACKBONE.BACKBONE_TYPE.VITPOSE_L
+            elif cfg.MODEL.BACKBONE.TYPE == 'vit_base':
+                self.backbone_path = cfg.MODEL.BACKBONE.BACKBONE_TYPE.VITPOSE_B
+            elif cfg.MODEL.BACKBONE.TYPE == 'vit_small':
+                self.backbone_path = cfg.MODEL.BACKBONE.BACKBONE_TYPE.VITPOSE_S
             log.info(f'Loading backbone weights from {self.backbone_path}')
-            checkpoint = torch.load(cfg.MODEL.BACKBONE.PRETRAINED_WEIGHTS, map_location='cpu')
+            checkpoint = torch.load(self.backbone_path, map_location='cpu')
             model_state_dict = self.backbone.state_dict()
             new_state_dict = {}
             for key in checkpoint["state_dict"].keys():
