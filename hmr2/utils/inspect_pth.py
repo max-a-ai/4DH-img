@@ -48,7 +48,7 @@ def inspect_pth(pth_file, output_dir='.'):
     print(f"README.md created at {output_file}")
 
 # Example usage
-path_file = '/home/max/Documents/4dh-img/hmr2_training_data/vitpose_backbone.pth'
+path_file = '/home/max/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-l.pth'
 output_dir = path_file.replace('.pth', '.md')
 inspect_pth(path_file, output_dir='/home/max/Documents/4dh-img/hmr2/utils')
 # inspect_pth('/home/max/nas_drive/publicdatasets/backbones/vitpose/vitpose-backbones/vitpose-h.pth', output_dir='/home/max/Documents/4dh-img/hmr2/utils')

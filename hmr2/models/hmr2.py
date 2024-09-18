@@ -52,6 +52,8 @@ class HMR2(pl.LightningModule):
                     new_state_dict[truncated_key] = checkpoint["state_dict"][key]
                 elif "keypoint_head" in key:
                     continue
+                else:
+                    new_state_dict[key] = checkpoint["state_dict"][key]
             self.backbone.load_state_dict(new_state_dict)
 
             # self.backbone.load_state_dict(checkpoint['state_dict'])

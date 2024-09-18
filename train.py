@@ -7,7 +7,7 @@ root = pyrootutils.setup_root(
     pythonpath=True,
     dotenv=True,
 )
-
+HYDRA_FULL_ERROR=1
 import os
 from pathlib import Path
 
@@ -97,7 +97,8 @@ def train(cfg: DictConfig) -> Tuple[dict, dict]:
         log_hyperparameters(object_dict)
 
     # Train the model
-    trainer.fit(model, datamodule=datamodule, ckpt_path='last')
+    # trainer.fit(model, datamodule=datamodule, ckpt_path='last')
+    trainer.fit(model, datamodule=datamodule, ckpt_path=None)
     log.info("Fitting done")
 
 

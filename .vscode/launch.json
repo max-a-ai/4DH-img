@@ -17,22 +17,11 @@
             // command for terminal
             "type": "debugpy",
             "request": "launch",
-            "name": "train",
-            "python": "/home/max/venvs/4d-humans/bin/python",
-            "cwd": "/home/max/Documents/4DH-img",
-            "program": "train.py",
-            // "args": ["--dataset", "COCO-VAL"],
-            "console": "integratedTerminal"
-        },    
-        {
-            // command for terminal
-            "type": "debugpy",
-            "request": "launch",
-            "name": "Demo",
+            "name": "Train",
             "python": "/home/max/new_venv/bin/python",
             "cwd": "/home/max/Documents/4dh-img",
             "program": "train.py",
-            // "args": ["--dataset", "COCO-VAL"],
+            "args": ["exp_name=hmr2", "data=mix_all", "experiment=hmr_vit_transformer", "trainer=gpu"],
             "console": "integratedTerminal"
         },    
     ]
