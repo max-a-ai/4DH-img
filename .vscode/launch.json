@@ -24,5 +24,23 @@
             "args": ["exp_name=hmr2", "data=mix_all", "experiment=hmr_vit_transformer", "trainer=gpu"],
             "console": "integratedTerminal"
         },    
+        {
+            // command for terminal
+            "type": "debugpy",
+            "request": "launch",
+            "name": "Demo",
+            "python": "/home/max/new_venv/bin/python",
+            "cwd": "/home/max/Documents/4dh-img",
+            "program": "demo.py",
+            "args": [
+                "--img_folder", "example_data/images",
+                "--out_folder", "example_data/images_output",
+                "--batch_size", "48",
+                "--full_frame"
+              ],
+                    "console": "integratedTerminal"
+        },    
+
     ]
 }
+

@@ -12,7 +12,8 @@ from hmr2.datasets.vitdet_dataset import ViTDetDataset, DEFAULT_MEAN, DEFAULT_ST
 from hmr2.utils.renderer import Renderer, cam_crop_to_full
 
 LIGHT_BLUE=(0.65098039,  0.74117647,  0.85882353)
-
+LIGHT_RED = (0.83921569,  0.37254902,  0.37254902)
+LIGHT_ORANGE = (0.95686275,  0.64313725,  0.37647059)
 def main():
     import time
     start = time.time()

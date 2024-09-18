@@ -8,6 +8,7 @@ import trimesh
 import cv2
 from yacs.config import CfgNode
 from typing import List, Optional
+import json
 
 def cam_crop_to_full(cam_bbox, box_center, box_size, img_size, focal_length=5000.):
     # Convert cam_bbox to full image
@@ -148,6 +149,12 @@ class Renderer:
 
         self.camera_center = [self.img_res // 2, self.img_res // 2]
         self.faces = faces
+        with open("hmr2/utils/smpl_vert_segmentation.json", "r") as f:
+            self.seg = json.load(f)
+            self.head_vertex_ids = self.seg["head"]
+            self.left_arm = self.seg["leftArm"] + self.seg["leftHand"] + self.seg["leftForeArm"] + self.seg["leftShoulder"]
+            self.right_arm = self.seg["rightArm"] + self.seg["rightHand"] + self.seg["rightForeArm"] + self.seg["rightShoulder"]
+            self.arms = self.left_arm + self.right_arm
 
     def __call__(self,
                 vertices: np.array,
@@ -240,8 +247,15 @@ class Renderer:
         #     metallicFactor=0.0,
         #     alphaMode='OPAQUE',
         #     baseColorFactor=(*mesh_base_color, 1.0))
+        
+        # Init vertex colors
         vertex_colors = np.array([(*mesh_base_color, 1.0)] * vertices.shape[0])
+        for idx in self.head_vertex_ids:
+            vertex_colors[idx] = [0.83921569,  0.37254902,  0.37254902, 1.0]
+        for idx in self.arms:
+            vertex_colors[idx] = [0.95686275,  0.64313725,  0.37647059, 1.0]
         print(vertices.shape, camera_translation.shape)
+        
         mesh = trimesh.Trimesh(vertices.copy() + camera_translation, self.faces.copy(), vertex_colors=vertex_colors)
         # mesh = trimesh.Trimesh(vertices.copy(), self.faces.copy())
         
@@ -325,8 +339,8 @@ class Renderer:
         ):
 
         renderer = pyrender.OffscreenRenderer(viewport_width=render_res[0],
-                                              viewport_height=render_res[1],
-                                              point_size=1.0)
+                                                viewport_height=render_res[1],
+                                                point_size=1.0)
         # material = pyrender.MetallicRoughnessMaterial(
         #     metallicFactor=0.0,
         #     alphaMode='OPAQUE',
@@ -335,7 +349,7 @@ class Renderer:
         mesh_list = [pyrender.Mesh.from_trimesh(self.vertices_to_trimesh(vvv, ttt.copy(), mesh_base_color, rot_axis, rot_angle)) for vvv,ttt in zip(vertices, cam_t)]
 
         scene = pyrender.Scene(bg_color=[*scene_bg_color, 0.0],
-                               ambient_light=(0.3, 0.3, 0.3))
+                                ambient_light=(0.3, 0.3, 0.3))
         for i,mesh in enumerate(mesh_list):
             scene.add(mesh, f'mesh_{i}')
 
@@ -344,7 +358,7 @@ class Renderer:
         camera_center = [render_res[0] / 2., render_res[1] / 2.]
         focal_length = focal_length if focal_length is not None else self.focal_length
         camera = pyrender.IntrinsicsCamera(fx=focal_length, fy=focal_length,
-                                           cx=camera_center[0], cy=camera_center[1], zfar=1e12)
+                                            cx=camera_center[0], cy=camera_center[1], zfar=1e12)
 
         # Create camera node and add it to pyRender scene
         camera_node = pyrender.Node(camera=camera, matrix=camera_pose)
