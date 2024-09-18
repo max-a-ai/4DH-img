@@ -72,7 +72,7 @@ def default_config() -> CN:
     # This is for the "local variable" use pattern
     return _C.clone()
 
-def dataset_config(name='datasets_tar.yaml') -> CN:
+def dataset_config(name='datasets_tar_nas.yaml') -> CN:
     """
     Get dataset config file
     Returns:

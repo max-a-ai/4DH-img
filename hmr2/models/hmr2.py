@@ -31,8 +31,10 @@ class HMR2(pl.LightningModule):
         self.cfg = cfg
         # Create backbone feature extractor
         self.backbone = create_backbone(cfg)
-        if cfg.MODEL.BACKBONE.get('PRETRAINED_WEIGHTS', None):
+        if cfg.MODEL.BACKBONE.get('PRETRAINED_WEIGHTS', None): # Returns True if the key is present in the dictionary
+            # log.info(f'Loading backbone weights from {cfg.MODEL.BACKBONE.BACKBONE_TYPE.VITPOSE_H}')
             log.info(f'Loading backbone weights from {cfg.MODEL.BACKBONE.PRETRAINED_WEIGHTS}')
+            # self.backbone.load_state_dict(torch.load(cfg.MODEL.BACKBONE.BACKBONE_TYPE.VITPOSE_H, map_location='cpu')['state_dict'])
             self.backbone.load_state_dict(torch.load(cfg.MODEL.BACKBONE.PRETRAINED_WEIGHTS, map_location='cpu')['state_dict'])
 
         # Create SMPL head

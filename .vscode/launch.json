@@ -14,6 +14,8 @@
             "program": "${file}"
         },
         {
+            // command for terminal
+            // /home
             "type": "debugpy",
             "request": "launch",
             "name": "train",
